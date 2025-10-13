@@ -21,6 +21,12 @@
         <version>1.18.42</version> <!-- ou a versão mais recente -->
         <scope>provided</scope>
     </dependency>
+        <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.11.0</version>
+        <scope>test</scope>
+    </dependency>
     </dependencies>
 
 
