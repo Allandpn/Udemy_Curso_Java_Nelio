@@ -1,8 +1,7 @@
 package exercices;
 
-import entities.Produto;
+import entities.ProdutoConst;
 
-import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -11,7 +10,6 @@ public class EstoqueProdutos {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-
         System.out.print("Digite o nome do produto: ");
         String name = sc.nextLine();
         System.out.print("Digite o preço do produto: ");
@@ -19,10 +17,12 @@ public class EstoqueProdutos {
         System.out.print("Digite a quantidade do produto: ");
         int quantity = sc.nextInt();
 
-        Produto p = new Produto(name, preco, quantity);
+//        ProdutoConst p = new ProdutoConst(name, preco, quantity);
+
+        ProdutoConst p = new ProdutoConst(name, preco);
 
         p.showData();
-        System.out.println(p);
+
 
         System.out.print("Digite a quantidade do produto para adicionar: ");
         int entradaProduto = sc.nextInt();

@@ -38,7 +38,7 @@ public class Produto {
 
     public void removeProducts(int q) {
         quantity -= q;
-        quantity = (quantity < 0) ? 0 : quantity;
+        quantity = Math.max(quantity, 0);
     }
 
 
