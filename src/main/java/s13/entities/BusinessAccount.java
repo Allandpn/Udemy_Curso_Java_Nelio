@@ -1,14 +1,14 @@
-package s10.entities;
+package s13.entities;
 
-public class BusinessAccount extends Account{
+public class BusinessAccount extends Account {
     private Double loanLimit;
 
     public BusinessAccount() {
         super();
     }
 
-    public BusinessAccount(Double balance, String holder, Integer number, Double loanLimit) {
-        super(balance, holder, number);
+    public BusinessAccount(Integer number, String holder, Double balance, Double loanLimit) {
+        super(number, holder, balance);
         this.loanLimit = loanLimit;
     }
 
@@ -22,7 +22,13 @@ public class BusinessAccount extends Account{
 
     public void loan(double amount){
         if(amount <= loanLimit){
-            deposit(amount);
+            balance += amount - 10.0;
         }
+    }
+
+    @Override
+    public void withDraw(double x){
+        super.withDraw(x);
+        balance -= 2.0;
     }
 }

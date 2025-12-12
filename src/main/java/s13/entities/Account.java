@@ -1,17 +1,17 @@
-package s10.entities;
+package s13.entities;
 
 public class Account {
     private Integer number;
     private String holder;
-    private Double balance;
+    protected double balance;
 
     public Account() {
     }
 
-    public Account(Double balance, String holder, Integer number) {
-        this.balance = balance;
-        this.holder = holder;
+    public Account(Integer number,  String holder, double balance) {
         this.number = number;
+        this.holder = holder;
+        this.balance = balance;
     }
 
     public String getHolder() {
@@ -34,8 +34,8 @@ public class Account {
         return balance;
     }
 
-    public void withDraw(Double x){
-        balance -= x;
+    public void withDraw(double x){
+        balance -= x + 5.0;
     }
 
     public void deposit(Double x){
