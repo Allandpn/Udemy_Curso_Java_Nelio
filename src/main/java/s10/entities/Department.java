@@ -2,13 +2,12 @@ package s10.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class Estudante {
-    private String nome;
-    private String email;
-
-
+public class Department {
+    private String name;
 }
