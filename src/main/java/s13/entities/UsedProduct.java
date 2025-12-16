@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class UsedProduct extends Product{
+    private static final DateTimeFormatter DATA_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private LocalDate manufactureDate;
 
     public UsedProduct() {
@@ -14,18 +15,18 @@ public class UsedProduct extends Product{
         this.manufactureDate = manufactureDate;
     }
 
-    public LocalDate getCustomsFee() {
+    public LocalDate getmanufactureDate() {
         return manufactureDate;
     }
 
-    public void setCustomsFee(LocalDate customsFee) {
+    public void setmanufactureDate(LocalDate manufactureDate) {
         this.manufactureDate = manufactureDate;
     }
 
     @Override
     public String priceTag(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(super.getName()).append(" $ ").append(super.getPrice()).append("Manufacture date: $ ").append(manufactureDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
-        return sb.toString();
+        String st = super.priceTag();
+        st += " (Manufacture date: " + DATA_FORMATTER.format(manufactureDate) + ")";
+        return st;
     }
 }

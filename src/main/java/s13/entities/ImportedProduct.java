@@ -1,5 +1,8 @@
 package s13.entities;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class ImportedProduct extends Product{
     private Double customsFee;
 
@@ -25,8 +28,9 @@ public class ImportedProduct extends Product{
 
     @Override
     public String priceTag(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(super.getName()).append(" $ ").append(super.getPrice()).append("Customs fee: $ ").append(customsFee);
-        return sb.toString();
+        NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        String st = super.priceTag();
+        st += " Customs fee: " + nf.format(customsFee);
+        return st;
     }
 }

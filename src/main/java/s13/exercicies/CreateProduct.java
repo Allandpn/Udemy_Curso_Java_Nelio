@@ -19,8 +19,7 @@ public class CreateProduct {
         List<Product> products = new ArrayList<>();
 
         System.out.print("Enter the number od products: ");
-        int n = sc.nextInt();
-        sc.nextLine();
+        int n = Integer.parseInt(sc.nextLine());
         for(int i=0; i<n; i++){
             System.out.println("Product #" + (i+1) + " data:");
             System.out.print("Common, used or imported (c/u/i)?");
@@ -29,7 +28,7 @@ public class CreateProduct {
             System.out.print("Name: ");
             String name = sc.nextLine();
             System.out.print("Price: ");
-            Double price = sc.nextDouble();
+            double price = Double.parseDouble(sc.nextLine());
             switch (x) {
                 case 'c':
                     products.add(new Product(name, price));
@@ -42,7 +41,7 @@ public class CreateProduct {
                     break;
                 case 'i':
                     System.out.print("Customs fee: ");
-                    double customsFee = sc.nextDouble();
+                    double customsFee = Double.parseDouble(sc.nextLine());
                     products.add(new ImportedProduct(name, price, customsFee));
                     break;
             }

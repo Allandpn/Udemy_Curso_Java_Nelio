@@ -1,6 +1,10 @@
 package s13.entities;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Product {
+    private static final NumberFormat NF = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
     private String name;
     private Double price;
 
@@ -29,8 +33,6 @@ public class Product {
     }
 
     public String priceTag(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(name).append(" $ ").append(price);
-        return sb.toString();
+        return name + " " + NF.format(price);
     }
 }
