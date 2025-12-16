@@ -17,8 +17,10 @@ public class CreateAccount {
         Account account3 = new SavingsAccount(1004, "Bob", 100.0, 0.00);
 
         //DOWNCASTING
+        BusinessAccount businessAccount4 = (BusinessAccount) new Account(1004, "boo", 0.0);
         BusinessAccount businessAccount2 = (BusinessAccount) account1;
         businessAccount2.loan(1);
+        businessAccount4.loan(1);
 
         if(account3 instanceof BusinessAccount){
             BusinessAccount businessAccount1 = (BusinessAccount) account3;
