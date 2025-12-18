@@ -19,7 +19,7 @@ public class PessoaFisica extends Pessoa{
         if(gastosSaude > 0){
             imposto -= gastosSaude * 0.5;
         }
-        return imposto;
+        return Math.max(imposto, 0.0);
     }
 
 }

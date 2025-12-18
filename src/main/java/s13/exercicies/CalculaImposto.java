@@ -38,6 +38,9 @@ public class CalculaImposto {
                     int numeroFuncionarios = Integer.parseInt(sc.nextLine());
                     pessoas.add(new PessoaJuridica(nome, rendaAnual, numeroFuncionarios));
                     break;
+                default:
+                    System.out.println("Number incorrect!");
+                    i--;
             }
         }
         System.out.println("\nTAXES PAID:");
