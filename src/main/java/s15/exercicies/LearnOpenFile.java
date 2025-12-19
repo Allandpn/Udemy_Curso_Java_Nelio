@@ -1,4 +1,4 @@
-package s15;
+package s15.exercicies;
 
 import java.io.File;
 import java.io.IOException;
