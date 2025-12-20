@@ -6,11 +6,11 @@ public class Product {
     private int qnt;
     private double priceTotal;
 
-    public Product(String name, double price, int qnt, double priceTotal) {
+    public Product(String name, double price, int qnt) {
         this.name = name;
         this.price = price;
         this.qnt = qnt;
-        this.priceTotal = priceTotal;
+        this.priceTotal = priceTotal();
     }
 
     public String getName() {
@@ -45,12 +45,11 @@ public class Product {
         this.priceTotal = priceTotal;
     }
 
-    public double priceTotal(){
-        return price * qnt;
+    private double priceTotal(){
+        return  price * qnt;
     }
 
-    @Override
-    public String toString(){
+    public String toCsv(){
         return name + "," + priceTotal;
     }
 }
