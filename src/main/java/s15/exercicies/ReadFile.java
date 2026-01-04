@@ -31,7 +31,7 @@ public class ReadFile {
             System.out.println("Error ao ler arquivo: " + e.getMessage());
         }
 
-        Path pathWriter = Path.of("src", "main", "java", "s15", "data", "old", "data.csv");
+        Path pathWriter = Path.of("src", "main", "java", "s15", "data", "old2", "data.txt");
         try {
             Files.createDirectories(pathWriter.getParent());
 

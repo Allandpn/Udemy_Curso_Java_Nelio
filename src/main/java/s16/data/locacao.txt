@@ -1,0 +1,4 @@
+INVOICE
+Basic payment: R$ 390,00
+Tax: R$ 58,50
+Total payment: R$ 448,50
