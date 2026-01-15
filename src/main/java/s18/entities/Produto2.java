@@ -1,6 +1,7 @@
 package s18.entities;
 
 import java.util.Comparator;
+import java.util.Locale;
 import java.util.Objects;
 
 public class Produto2{
@@ -45,8 +46,28 @@ public class Produto2{
     }
 
     @Override
+    public String toString() {
+        return name + " - " + String.format("%.2f", price);
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hashCode(name);
     }
 
+    public static void staticConsumerProduct(Produto2 p){
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
+    public void nonStaticConsumerProduct(){
+        setPrice(getPrice() * 1.1);
+    }
+
+    public static String staticFunctionProduct(Produto2 p){
+        return p.getName().toLowerCase();
+    }
+
+    public String nonStaticFunctionProduct(){
+        return getName().toUpperCase();
+    }
 }
