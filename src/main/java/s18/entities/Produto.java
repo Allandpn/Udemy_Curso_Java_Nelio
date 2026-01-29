@@ -3,7 +3,7 @@ package s18.entities;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Produto  {
+public class Produto  implements Comparable<Produto>{
     private String name;
     private Double price;
 
@@ -42,4 +42,8 @@ public class Produto  {
     }
 
 
+    @Override
+    public int compareTo(Produto o) {
+        return getName().compareTo(o.getName());
+    }
 }

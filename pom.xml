@@ -21,11 +21,16 @@
         <version>1.18.42</version> <!-- ou a versão mais recente -->
         <scope>provided</scope>
     </dependency>
-        <dependency>
+    <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
         <version>5.11.0</version>
         <scope>test</scope>
+    </dependency>
+    <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.5.0</version>
     </dependency>
     </dependencies>
 
